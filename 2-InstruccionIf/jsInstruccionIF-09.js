@@ -1,6 +1,12 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	var numero;
+
+	numero=Math.random(0,11)*10+1;
+
+	numero=parseInt(numero);
+
+	alert(numero);
+ 	
 
 }//FIN DE LA FUNCIÓN
