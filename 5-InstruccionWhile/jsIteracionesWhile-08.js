@@ -10,7 +10,40 @@ function mostrar()
 	contador=0;
 	sumaPositivos=0;
 	multiplicacionNegativos=1;
-	respuesta='si';
+
+	numeroIngresado = prompt("Ingrese un número");
+	numeroIngresado=parseInt(numeroIngresado);
+
+	if (numeroIngresado>0) 
+	{
+		contador=numeroIngresado;
+	}
+	else
+		if (numeroIngresado<0) 
+		{
+			contador=numeroIngresado;
+		}
+	respuesta=confirm("Desea ingresar otro número?");
+	
+
+	while(respuesta==true)
+	{
+		numeroIngresado = prompt("Ingrese un número");
+		numeroIngresado=parseInt(numeroIngresado);
+		if(numeroIngresado>0)
+		{
+			sumaPositivos=contador+numeroIngresado;
+		}
+		else
+		{
+			if(numeroIngresado<0)
+			{
+				multiplicacionNegativos=contador*numeroIngresado;
+			}
+		}	
+		respuesta= confirm("Desea ingresar otro número?");
+	}
+		
 
 
 	txtIdSuma.value=sumaPositivos;
